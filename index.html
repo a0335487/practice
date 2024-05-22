@@ -9,10 +9,9 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="header-nav">
             <div class="nav-logo">
-                <img src="img/Vector.svg" alt="logo" width="40px">
-                <img src="img/Group.svg" alt="cubit" width="100px">
+                <img src="img/Frame 6.svg" alt="logo" width="123px">
             </div>
             <ul>
                 <li><a href="#">Продукты</a></li>
@@ -37,21 +36,69 @@
                         Полностью ведем проект или помогаем команде на стороне клиента.</p>
                     <button class="preview-request">Оставить заявку</button>
                 </div>
-                <div class="right-preview">
-                    <img src="img/Mask group.svg" alt="">
-                    <div class="dop-info">
-                        <span>1100</span>
-                        <p>люди ежедневно пользуются нашими продуктами</p>
-                        <i class='bx bx-user bx-tada'></i>
+                <div class="right-info">
+                    <span>1100</span>
+                    <p>человек ежедневно<br> пользуются нашими<br> продуктами</p>
+                </div>
+            </section>  
+            <div class="preview-img">
+                <img class="orange" src="img/Mask group.png" alt="">
+            </div>   
+        </article>
+        <div class="null"></div>
+        <article class="main-content">
+            <section class="service-section">
+                <h2>Услуги и решения</h2>
+                <nav class="service-nav">
+                    <ul>
+                        <li id="bisness" onclick="Nav1()"><a>Бизнес-анализ</a></li>
+                        <li id="Backend" onclick="Nav2()"><a>Backend</a></li>
+                        <li id="frontend" onclick="Nav3()"><a>Frontend</a></li>
+                        <li id="mobile" onclick="Nav4()"><a>Mobile</a></li>
+                    </ul>
+                    <div id="active-nav" class="active-nav"></div>
+                </nav>
+                <div class="service-main">
+                    <div class="service-info">
+                        <h3>Бизнес-анализ</h3>
+                        <p>Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
+                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
+                            описываем  технические требования на основе бизнес-требований.
+                        </p>
+                        <div class="tools">
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Bootstrap</li>
+                                <li>БЭМ</li>
+                                <li>JS</li>
+                                <li>Jquery</li>
+                                <li>VanilaJS</li>
+                                <li>ES6+</li>
+                                <li>WebPack</li>
+                                <li>VUE.js</li>
+                                <li>React.js</li>
+                                <li>Angular</li>
+                            </ul>
+                        </div>
+                        <button class="preview-request">Подробнее</button>
+                    </div>
+                    <div class="service-picture">
+                        <img class="service-img" src="img/service-picture.svg" alt="">
                     </div>
                 </div>
+            </section>
+
+            <section class="partners">
+                <h2>Партнеры</h2>
             </section>
         </article>
 
 
     </main>
     <footer>
-123
+
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
