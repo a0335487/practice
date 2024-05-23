@@ -117,12 +117,37 @@ header{
     right: 0;
     overflow: hidden;
     height: 100%;
-    z-index: 2;
 }
 .preview-content .orange{
+    position: relative;
     height: 100%;
     margin-right: -40px; 
+    z-index: 2;
 }
+.right-info{
+    position: absolute;
+    top: 210px;
+    left: 130px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.right-info span{
+    font-weight: 700;
+    font-size: 112px;
+    line-height: 112px;
+    letter-spacing: 0.02em;
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to right, #fff, #fff, #000000);
+ }
+ .right-info p{
+    margin-top: 10px;
+    font-size: 14px;
+    color:#E9530E;
+ }
+
 
 
 .content-section {
@@ -161,28 +186,6 @@ header{
     font-size: 16px;
 }
 
-.content-section .right-info{
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    /* position: absolute; */
-    margin-right: 345px;
-}
-.right-info span{
-    font-weight: 700;
-    font-size: 112px;
-    line-height: 112px;
-    letter-spacing: 0.02em;
-    color: transparent;    
-	-webkit-background-clip: text;
-	background-clip: text;
-	background-image: linear-gradient(to right, #fff, #fff, #000000);
- }
- .right-info p{
-    margin-top: 10px;
-    font-size: 14px;
-    color:#E9530E;
- }
 
 .null{
     height: 48px;
@@ -299,15 +302,39 @@ header{
 
 /*partners*/
 .partners{
-    position: relative;
     width: 1400px;
     margin: 102px auto;
 }
-.partners h2{
+.partners .partners-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.partners-title h2{
     color: #fff;
     font-weight: 700;
     font-size: 64px;
     line-height: 72px;
+}
+.partners-title .partners-slide-manage{
+    display: flex;
+    column-gap: 12px;
+}
+.partners-title .but-manage{
+    font-size: 25px;
+    color: #fff;
+    background: #323638;
+    height: 48px;
+    width: 48px;
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        background: #E9530E;
+    }
 }
 
 
