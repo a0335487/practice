@@ -184,16 +184,6 @@ header{
     color:#E9530E;
  }
 
-
- @media (max-width: 1400px){
-    nav, .content-section{
-        width: 1200px;
-    }
-    .preview-content .orange{
-        margin-right: -400px;
-    }
- }
-
 .null{
     height: 48px;
     width: 100%;
@@ -319,3 +309,14 @@ header{
     font-size: 64px;
     line-height: 72px;
 }
+
+
+
+@media (max-width: 1400px){
+    .header-nav, .service-section, .content-section, .partners{
+        width: 1200px;
+    }
+    .preview-content .orange{
+        margin-right: -400px;
+    }
+ }
