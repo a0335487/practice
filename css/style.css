@@ -66,6 +66,11 @@ header{
     font-weight: 400;
     color: #fff;
 
+    &:hover{
+        color:#E9530E;
+        transition: all 0.3s;
+    }
+
 }
 .nav-logo,
 .button-nav {
@@ -82,6 +87,11 @@ header{
     color: #fff;
     font-weight: 700;
     font-size: 14px;
+    cursor: pointer;
+    &:hover{
+        background: #ac1d00;
+        transition: all 0.3s;
+    }
 }
 
 .button-nav .telegram {
@@ -93,6 +103,10 @@ header{
     background: #292929;
     border-radius: 50%;
     border: none;
+    &:hover{
+        background: #1b1b1b;
+        transition: all 0.3s;
+    }
 }
 
 .button-nav .telegram img {
@@ -148,8 +162,6 @@ header{
     color:#E9530E;
  }
 
-
-
 .content-section {
     position: relative;
     display: flex;
@@ -184,6 +196,10 @@ header{
     color: #fff;
     font-weight: 700;
     font-size: 16px;
+    &:hover{
+        background: #ac1d00;
+        transition: all 0.3s;
+    }
 }
 
 
@@ -234,9 +250,12 @@ header{
     border-radius: 100px;
     cursor: pointer;
  }
+ .service-nav ul li:hover a{
+    color:#E9530E;
+    transition: all 0.3s;
+}
  .service-nav ul li a{
     color: #fff;
-    
  }
  .service-nav .active-nav{
     z-index: 1;
@@ -334,6 +353,7 @@ header{
 
     &:hover{
         background: #E9530E;
+        transition: all 0.3s;
     }
 }
 
