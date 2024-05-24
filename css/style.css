@@ -208,11 +208,53 @@ header{
 }
 
 
-.null{
-    height: 48px;
-    width: 100%;
-    background: #d3d3d3;
+.line {
+    display: flex;
+    overflow: hidden;
+    padding: 12px 20px;
+    background: #D3D3D3;
+    color: #000;
+ }
+
+ .line_inner {
+    font-size: 16px;
+    font-size: sans-serif;
+    line-height: 24px;
+    white-space: nowrap;
+    display: inline-block;
 }
+.line_inner_1 {
+    animation: marquee1 30s infinite linear;
+    animation-delay: -30s;
+}
+
+.line_inner_2 {
+    animation: marquee2 30s infinite linear;
+    animation-delay: -15s;
+}
+
+
+@keyframes marquee1 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee2 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+.line_content{
+    padding: 0 40px;
+}
+
 
  /*SERVICE*/
  .service-section{
