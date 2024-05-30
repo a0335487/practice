@@ -59,3 +59,14 @@ function Nav4() {
     moveNav(x, stop);
 }
 
+// Открыть список в footer
+function OpenFooter(str){
+    const foot_block = document.getElementById(str);
+    if (foot_block.style.display !== "flex"){
+        foot_block.style.display = "flex";
+    }
+    else{
+        foot_block.style.display = "none";
+    }
+    
+}

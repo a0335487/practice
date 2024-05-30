@@ -14,17 +14,22 @@
 <body>
     <header>
         <nav class="header-nav">
+            <div class="header_burger">
+                <span></span>
+            </div>
             <div class="nav-logo">
                 <img src="img/Frame 6.svg" alt="logo" width="123px">
             </div>
-            <ul>
-                <li><a href="#">Продукты</a></li>
-                <li><a href="#">Проекты</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Компания</a></li>
-                <li><a href="#">Команда</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
+            <div class="header_menu">
+                <ul>
+                    <li><a href="#">Продукты</a></li>
+                    <li><a href="#">Проекты</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Компания</a></li>
+                    <li><a href="#">Команда</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
             <div class="button-nav">
                 <button class="telegram"><img src="img/Frame.svg" alt="telegram"></button>
                 <button class="request">Заявка</button>
@@ -270,7 +275,53 @@
     </main>
     <footer>
         <nav class="footer-nav">
-            <table>
+            <div class="foot-col">
+                <div class="col-title first-title">
+                    <img src="img/Frame 6.svg" alt="logo" width="123px">
+                </div>
+                <div class="col-point-info">
+                    <a>hello@cubit.su</a>
+                    <a>Написать в телеграмм</a>
+                    <a>+7 905 904-66-31</a>
+                    <a>ERP Trade</a>
+                    <a>г. Новокузнецк,<br> пр-кт Кузнецкстроевский д. 9</a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <div class="col-title" onclick="OpenFooter('product')">
+                    <h4>Продукты</h4><i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="col-point" id="product">
+                    <a>Zveno</a>
+                    <a>Мобильные осмотры</a>
+                    <a>КГШ</a>
+                    <a>ERP Trade</a>
+                    <a>ОТК</a>
+                    <a>Проверка доверенностей</a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <div class="col-title" onclick="OpenFooter('services')">
+                    <h4>Услуги</h4><i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="col-point" id="services">
+                    <a>Бизнес-анализ</a>
+                    <a>Frontend-разработка</a>
+                    <a>Backend-разработка</a>
+                    <a>Мобильная разработка</a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <div class="col-title" onclick="OpenFooter('company')">
+                    <h4>Компания</h4><i class='bx bx-chevron-down'></i>
+                </div>
+                <div class="col-point" id="company">
+                    <a>О компании</a>
+                    <a>Команда</a>
+                    <a>Контакты</a>
+                </div>
+            </div>
+            <!-- <table>
                 <thead>
                     <tr>
                         <th scope="col"><img src="img/Frame 6.svg" alt="logo" width="123px"></th>
@@ -301,25 +352,27 @@
                             <a>Frontend-разработка</a>
                             <a>Backend-разработка</a>
                             <a>Мобильная разработка</a>
-                            <br><br><br><br>
                         </td>
                         <td>
                             <a>О компании</a>
                             <a>Команда</a>
                             <a>Контакты</a>
-                            <br><br><br><br>
-                            <br><br>
                         </td>
                     </tr>
                 </tbody>
-            </table>
-
+            </table> -->
+            
             <div class="name-org">
                 © 2024 ООО Кубит
-            </div>
+            </div> 
         </nav>
     </footer>
 
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <!-- JS for Menu -->
+    <script src="js/scriptByMenu.js"></script>
     <!-- JS -->
     <script src="js/main.js"></script>
     <!-- Swiper JS -->
