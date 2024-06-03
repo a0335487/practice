@@ -107,13 +107,75 @@
                 <h2>Услуги и решения</h2>
                 <nav id="service-nav" class="service-nav">
                     <ul>
-                        <li id="bisness" onclick="Nav1()"><a>Бизнес-анализ</a></li>
+                        <li class="active" id="bisness" onclick="Nav1()"><a>Бизнес-анализ</a></li>
                         <li id="Backend" onclick="Nav2()"><a>Backend</a></li>
                         <li id="frontend" onclick="Nav3()"><a>Frontend</a></li>
                         <li id="mobile" onclick="Nav4()"><a>Mobile</a></li>
                     </ul>
                     <div id="active-nav" class="active-nav"></div>
                 </nav>
+
+                <div class="main_1">
+                    <div class="main_2">
+                        <div class="child">Бизнес-анализ</div>
+                        <div class="child">Backend</div>
+                        <div class="child">Frontend</div>
+                        <div class="child">Mobile</div>
+                        <div class="child"></div>
+    
+                        <div class="act"></div>
+                    </div>
+                </div>
+                
+
+
+                <style>
+                    .main_1{
+                        position: relative;
+                        width: 100%;
+                    }
+                  .main_2{
+                    margin-top: 50px;
+                    border-radius: 100px;
+                    /* text-align: center; */
+                        width: 100%;
+                        min-width: fit-content;
+                        height: 66px;
+                        overflow-x: scroll;
+                        display: flex;
+                        box-sizing: border-box;
+                        scroll-snap-type: x mandatory;
+                    }
+                    .child{
+                        min-width: fit-content;
+                        width: 50%;
+                        background: #222628;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        scroll-snap-align: start;
+                        flex: 0 0 50%;
+                    }
+                    .act{
+                        z-index: 1;
+                        position: absolute;
+                        border-radius: 100px;
+                        top: 58px;
+                        height: 51px;
+                        left: 6px;
+                        width: 50%;
+                        /* min-width: fit-content; */
+                        background: #e7e7e717;
+                        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+                    }
+                 
+                </style>
+
+
+
+
+
                 <div class="service-main">
                     <div class="service-info">
                         <h3 id="service-title">Бизнес-анализ</h3>
