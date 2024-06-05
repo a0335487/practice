@@ -36,15 +36,15 @@
     .main{
         position: relative;
         text-align: left;
-        width: 500px;
-        height: 500px;
+        width: 50vw;
+        height: 90px;
         overflow-x: scroll;
         display: flex;
         box-sizing: border-box;
         scroll-snap-type: x mandatory;
     }
     .child{
-        width: 500px;
+        width: 50%;
         background-color: blueviolet;
         color: #fff;
         display: flex;
@@ -52,7 +52,7 @@
         align-items: center;
         justify-content: center;
         scroll-snap-align: start;
-        flex: 0 0 500px;
+        flex: 0 0 50%;
     }
     .child:nth-child(2n){
         background-color: #fff;

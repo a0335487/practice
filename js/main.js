@@ -1,63 +1,63 @@
-const El = document.getElementById('active-nav');
-const parent = document.getElementById('service-nav').offsetWidth;
+// const El = document.getElementById('active-nav');
+// const parent = document.getElementById('service-nav').offsetWidth;
 
-function moveNav(x, stop) {
-    if (x < stop) {
-        let i = x;
-        let interval = setInterval(() => {
-            El.style.left = i + "px";
-            i += 4;
-            if (i >= stop) {
-                clearInterval(interval);
-            }
-        }, 1);
-    } else {
-        let j = x;
-        let interval = setInterval(() => {
-            El.style.left = j + "px";
-            j -= 4;
-            if (j <= stop) {
-                clearInterval(interval);
-            }
-        }, 1);
-    }
-}
+// function moveNav(x, stop) {
+//     if (x < stop) {
+//         let i = x;
+//         let interval = setInterval(() => {
+//             El.style.left = i + "px";
+//             i += 4;
+//             if (i >= stop) {
+//                 clearInterval(interval);
+//             }
+//         }, 1);
+//     } else {
+//         let j = x;
+//         let interval = setInterval(() => {
+//             El.style.left = j + "px";
+//             j -= 4;
+//             if (j <= stop) {
+//                 clearInterval(interval);
+//             }
+//         }, 1);
+//     }
+// }
 
 
-const serviceTitle = document.getElementById('service-title');
-const serviceDesc = document.getElementById('service-description');
-const serviceImg = document.getElementById('service-img');
+// const serviceTitle = document.getElementById('service-title');
+// const serviceDesc = document.getElementById('service-description');
+// const serviceImg = document.getElementById('service-img');
 
-function Nav1() {
-    serviceTitle.innerHTML = "Бизнес-анализ";
-    serviceImg.src = "img/service1.svg";
-    let x = El.offsetLeft;
-    moveNav(x, 4);
-}
+// function Nav1() {
+//     serviceTitle.innerHTML = "Бизнес-анализ";
+//     serviceImg.src = "img/service1.svg";
+//     let x = El.offsetLeft;
+//     moveNav(x, 4);
+// }
 
-function Nav2() {
-    serviceTitle.innerHTML = "Backend";
-    serviceImg.src = "img/service2.svg";
-    let stop = (parent / 4) + 4;
-    let x = El.offsetLeft;
-    moveNav(x, stop);
-}
+// function Nav2() {
+//     serviceTitle.innerHTML = "Backend";
+//     serviceImg.src = "img/service2.svg";
+//     let stop = (parent / 4) + 4;
+//     let x = El.offsetLeft;
+//     moveNav(x, stop);
+// }
 
-function Nav3() {
-    serviceTitle.innerHTML = "Frontend";
-    serviceImg.src = "img/service3.svg";
-    let stop = (parent / 2) + 4;
-    let x = El.offsetLeft;
-    moveNav(x, stop);
-}
+// function Nav3() {
+//     serviceTitle.innerHTML = "Frontend";
+//     serviceImg.src = "img/service3.svg";
+//     let stop = (parent / 2) + 4;
+//     let x = El.offsetLeft;
+//     moveNav(x, stop);
+// }
 
-function Nav4() {
-    serviceTitle.innerHTML = "Mobile";
-    serviceImg.src = "img/service4.svg";
-    let stop = parent - (parent / 4) - 4;
-    let x = El.offsetLeft;
-    moveNav(x, stop);
-}
+// function Nav4() {
+//     serviceTitle.innerHTML = "Mobile";
+//     serviceImg.src = "img/service4.svg";
+//     let stop = parent - (parent / 4) - 4;
+//     let x = El.offsetLeft;
+//     moveNav(x, stop);
+// }
 
 // Открыть список в footer
 function OpenFooter(str){
@@ -71,3 +71,16 @@ function OpenFooter(str){
     
 }
 
+
+function ServiceBlock(serviceName, number) {
+    var elements = document.querySelectorAll('.service-nav-child'); 
+    elements.forEach(function(element) {
+        element.classList.remove('active');
+    });
+    
+    var h2 = document.querySelector('h3'); 
+    h2.textContent = serviceName; 
+    
+    var selectedElement = document.querySelectorAll('.service-nav-child')[number - 1];
+    selectedElement.classList.add('active');
+}
