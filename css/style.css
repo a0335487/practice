@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'HeliosExt';
     src: url("../fonts/HeliosExt-Regular.otf") format('opentype');
@@ -31,13 +30,29 @@ a{
 li{
     list-style-type: none;
 }
+
+
+:root{
+    --main-orange-color: #E9530E;
+}
+
+
+
+
+
+
+
+
+
+
+
 header{
     position: absolute;
     width: 100%;
     top:0;
-    background: #ffffff09;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px  solid rgba(51, 51, 51, 0.445);
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(20px);
+    border-bottom: 0.40px solid rgba(255, 255, 255, 0.2);
     /* box-shadow: 0 0 10px rgba(182, 182, 182, 0.2); */
     height: 65px;
     display: flex;
@@ -142,7 +157,7 @@ header{
     color: #fff;
 
     &:hover{
-        color:#E9530E;
+        color: var(--main-orange-color);
         transition: all 0.3s;
     }
 
@@ -157,7 +172,7 @@ header{
     padding: 13px 20px;
     border: none;
     border-radius: 100px;
-    background: #F34925;
+    background: var(--main-orange-color);
     color: #fff;
     font-weight: 700;
     font-size: 14px;
@@ -234,7 +249,7 @@ header{
  .right-info p{
     margin-top: 10px;
     font-size: 14px;
-    color:#E9530E;
+    color: var(--main-orange-color);
  }
 
 .content-section {
@@ -264,7 +279,7 @@ h1{
 }
 .preview-request{
     margin-top: 36px;
-    background-color: #E9530E;
+    background-color: var(--main-orange-color);
     padding: 12px 28px;
     border: none;
     border-radius: 40px;
@@ -374,7 +389,7 @@ h1{
     cursor: pointer;
  }
  .service-nav ul li:hover a{
-    color:#E9530E;
+    color:var(--main-orange-color);
     transition: all 0.3s;
 }
  .service-nav ul li a{
@@ -490,7 +505,7 @@ h1{
     justify-content: center;
 
     &:hover{
-        background: #E9530E;
+        background: var(--main-orange-color);
         transition: all 0.3s;
     }
 }
@@ -596,7 +611,7 @@ h1{
     row-gap: 20px;
 }
 .footer-nav .col-point a:hover{
-    color:#E9530E;
+    color:var(--main-orange-color);
 }
 
 /* .footer-nav table{
@@ -821,7 +836,7 @@ footer .name-org{
         cursor: pointer;
      }
      .footer-nav .col-title:hover{
-        color:#E9530E;
+        color:var(--main-orange-color);
      }
      .footer-nav .col-title i{
         display: flex;

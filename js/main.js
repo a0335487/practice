@@ -72,7 +72,7 @@ function OpenFooter(str){
 }
 
 
-function ServiceBlock(serviceName, number) {
+function ServiceBlock(serviceName, number, imgSrc) {
     var elements = document.querySelectorAll('.service-nav-child'); 
     elements.forEach(function(element) {
         element.classList.remove('active');
@@ -83,4 +83,7 @@ function ServiceBlock(serviceName, number) {
     
     var selectedElement = document.querySelectorAll('.service-nav-child')[number - 1];
     selectedElement.classList.add('active');
+
+    var serviceImg = document.querySelector('.service-img');
+    serviceImg.src = 'img/' + imgSrc;
 }
