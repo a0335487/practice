@@ -1,63 +1,3 @@
-// const El = document.getElementById('active-nav');
-// const parent = document.getElementById('service-nav').offsetWidth;
-
-// function moveNav(x, stop) {
-//     if (x < stop) {
-//         let i = x;
-//         let interval = setInterval(() => {
-//             El.style.left = i + "px";
-//             i += 4;
-//             if (i >= stop) {
-//                 clearInterval(interval);
-//             }
-//         }, 1);
-//     } else {
-//         let j = x;
-//         let interval = setInterval(() => {
-//             El.style.left = j + "px";
-//             j -= 4;
-//             if (j <= stop) {
-//                 clearInterval(interval);
-//             }
-//         }, 1);
-//     }
-// }
-
-
-// const serviceTitle = document.getElementById('service-title');
-// const serviceDesc = document.getElementById('service-description');
-// const serviceImg = document.getElementById('service-img');
-
-// function Nav1() {
-//     serviceTitle.innerHTML = "Бизнес-анализ";
-//     serviceImg.src = "img/service1.svg";
-//     let x = El.offsetLeft;
-//     moveNav(x, 4);
-// }
-
-// function Nav2() {
-//     serviceTitle.innerHTML = "Backend";
-//     serviceImg.src = "img/service2.svg";
-//     let stop = (parent / 4) + 4;
-//     let x = El.offsetLeft;
-//     moveNav(x, stop);
-// }
-
-// function Nav3() {
-//     serviceTitle.innerHTML = "Frontend";
-//     serviceImg.src = "img/service3.svg";
-//     let stop = (parent / 2) + 4;
-//     let x = El.offsetLeft;
-//     moveNav(x, stop);
-// }
-
-// function Nav4() {
-//     serviceTitle.innerHTML = "Mobile";
-//     serviceImg.src = "img/service4.svg";
-//     let stop = parent - (parent / 4) - 4;
-//     let x = El.offsetLeft;
-//     moveNav(x, stop);
-// }
 
 // Открыть список в footer
 function OpenFooter(str){
@@ -87,3 +27,51 @@ function ServiceBlock(serviceName, number, imgSrc) {
     var serviceImg = document.querySelector('.service-img');
     serviceImg.src = 'img/' + imgSrc;
 }
+
+
+//скролл по якорным ссылкам
+function getScroll() {
+    function animate(draw, duration) {
+        var start = performance.now();
+        requestAnimationFrame(function animate(time) {
+            var timePassed = time - start;
+            if (timePassed > duration) {
+                timePassed = duration;
+            }
+            draw(timePassed);
+            if (timePassed < duration) {
+                requestAnimationFrame(animate);
+            }
+        });
+    }
+    let nav = document.getElementById('header_menu'),
+    links = nav.getElementsByTagName('a');  
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', () => {
+            // Отменяем стандартные действия браузера
+            event.preventDefault();
+            let link = links[i],
+                linkAttr = link.getAttribute('href');
+            linkAttr = linkAttr.match(/[a-z]/gi);
+            let linkStr = linkAttr.join(''),
+                div = document.getElementById(linkStr),
+                divId = div.getAttribute('id');
+            if (linkStr == divId) {
+                // let divIdY = div.getBoundingClientRect().top;
+                // window.scrollBy(0, divIdY / 20 -3);
+                animate(function(timePassed) {
+                    let divIdY = div.getBoundingClientRect().top - 80;
+                    window.scrollBy(0, divIdY / 15);
+                }, 1500);
+            }
+        });
+    };
+}
+getScroll();
+
+
+
+
+
+
+

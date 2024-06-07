@@ -20,14 +20,14 @@
             <div class="nav-logo">
                 <img src="img/Frame 6.svg" alt="logo" width="123px">
             </div>
-            <div class="header_menu">
+            <div class="header_menu" id="header_menu">
                 <ul>
                     <li><a href="#">Продукты</a></li>
                     <li><a href="#">Проекты</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Компания</a></li>
+                    <li><a href="#serviceSection">Услуги</a></li>
+                    <li><a href="#partners">Компания</a></li>
                     <li><a href="#">Команда</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#footer">Контакты</a></li>
                 </ul>
             </div>
             <div class="button-nav">
@@ -103,7 +103,7 @@
                 </div>  
         </div>
         <article class="main-content">
-            <section class="service-section">
+            <section class="service-section" id="serviceSection">
                 <h2>Услуги и решения</h2>
                 <!-- <nav id="service-nav" class="service-nav">
                     <ul>
@@ -136,77 +136,6 @@
                 
 
 
-                <style>
-                    /* хром, сафари */
-                    .main-service-nav::-webkit-scrollbar { display: none; }
-
-                    /* Скрываем scrollbar для IE, Edge и Firefox */
-                    .main-service-nav { -ms-overflow-style: none; 
-                        scrollbar-width: none; 
-                        overflow: -moz-scrollbars-none;}
-
-                    .service-navigation {
-                        position: relative;
-                        display: flex;
-                        justify-content: flex-start;
-                        margin-top: 48px;
-                        border-radius: 100px;
-                        padding: 0;
-                        z-index: 2;
-                        /* min-width: fit-content; */
-                        width: 100%; 
-                        
-                
-                    }
-
-                    .main-service-nav {
-                        width: 100%;
-                        display: flex;
-                        /* min-width: fit-content; */
-                        /* white-space: nowrap; */
-                        overflow-x: auto;
-                        scroll-snap-type: x mandatory;
-                        flex-shrink: 0;
-
-                    }
-                    .scroll-nav{
-                        display: flex;
-                        flex-direction: row;
-                        min-width: fit-content;
-                        white-space: nowrap;
-                        width: 100%;
-                        background: #222628;
-                        border-radius: 100px;
-                    }
-
-                    .service-nav-child {
-                        display: flex;
-                        justify-content: center;
-                        white-space: nowrap;
-                        width: 25%;
-                        min-width: fit-content;
-                        color: #fff;
-                        padding: 5px;
-                        scroll-snap-align: start;
-                        /* flex-shrink: 1; */
-                    }
-                    .service-nav-child a{ 
-                        flex-shrink: 0;
-                        width: 100%;
-                        text-align: center;
-                        padding: 17px 23px;
-                        /* background-color: #333; */
-                    }
-                    .main-service-nav .active a{
-                        background: #e7e7e717;
-                        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
-                        border-radius: 100px;
-                    }
-                 
-                </style>
-
-
-
                 <div class="service-main">
                     <div class="service-info">
                         <h3 id="service-title">Бизнес-анализ</h3>
@@ -214,8 +143,8 @@
                             Анализируем уже существующие  цифровые системы, предлагаем изменения, 
                             описываем  технические требования на основе бизнес-требований.
                         </p>
-                        <p class="tools-mobile">Технологии: HTML5, CSS3, Bootstrap, БЭМ, JS, Jquery, VanilaJS, ES6+,
-                             WebPack, VUE.js, React.js, Angular</p>
+                        <!-- <p class="tools-mobile">Технологии: HTML5, CSS3, Bootstrap, БЭМ, JS, Jquery, VanilaJS, ES6+,
+                             WebPack, VUE.js, React.js, Angular</p> -->
                         <div class="tools">
                             <ul>
                                 <li>HTML5</li>
@@ -240,7 +169,7 @@
                 </div>
             </section>
 
-            <section class="partners">
+            <section class="partners" id="partners">
                 <div class="partners-title">
                     <h2>Партнеры</h2>
                     <div class="partners-slide-manage">
@@ -341,9 +270,7 @@
                             
                         </div>
                     </div>
-                    <!-- <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div> -->
-                    <!-- <div class="swiper-pagination"></div> -->
+                 
                 </div>
 
                 <div class="gradient-parent">
@@ -366,18 +293,20 @@
            
         </article>
     </main>
-    <footer>
+    <footer id="footer">
         <nav class="footer-nav">
             <div class="foot-col">
                 <div class="col-title first-title">
                     <img src="img/Frame 6.svg" alt="logo" width="123px">
                 </div>
                 <div class="col-point-info">
-                    <a>hello@cubit.su</a>
+                    <a target="_blank" href="mailto:hello@cubit.su">hello@cubit.su</a>
                     <a>Написать в телеграмм</a>
-                    <a>+7 905 904-66-31</a>
+                    <a href="tel:+79059046631">+7 905 904-66-31</a>
                     <a>ERP Trade</a>
-                    <a>г. Новокузнецк,<br> пр-кт Кузнецкстроевский д. 9</a>
+                    <a target="_blank" href="https://yandex.ru/maps/237/novokuznetsk/house/kuznetskstroyevskiy_prospekt_9/bE4YdwVoTEQBQFtpfXt3cnpqYg==/?indoorLevel=1&ll=87.128515%2C53.763696&z=17.25">
+                    г. Новокузнецк,<br> пр-кт Кузнецкстроевский д. 9
+                </a>
                 </div>
             </div>
             <div class="foot-col">
@@ -398,10 +327,10 @@
                     <h4>Услуги</h4><i class='bx bx-chevron-down'></i>
                 </div>
                 <div class="col-point" id="services">
-                    <a>Бизнес-анализ</a>
-                    <a>Frontend-разработка</a>
-                    <a>Backend-разработка</a>
-                    <a>Мобильная разработка</a>
+                    <a href="#service-section" onclick="ServiceBlock('Бизнес-анализ', 1, 'service1.svg')">Бизнес-анализ</a>
+                    <a href="#service-section" onclick="ServiceBlock('Frontend', 3, 'service3.svg')">Frontend-разработка</a>
+                    <a href="#service-section" onclick="ServiceBlock('Backend', 2, 'service2.svg')">Backend-разработка</a>
+                    <a href="#service-section" onclick="ServiceBlock('Mobile', 4, 'service4.svg')">Мобильная разработка</a>
                 </div>
             </div>
             <div class="foot-col">
@@ -414,47 +343,7 @@
                     <a>Контакты</a>
                 </div>
             </div>
-            <!-- <table>
-                <thead>
-                    <tr>
-                        <th scope="col"><img src="img/Frame 6.svg" alt="logo" width="123px"></th>
-                        <th scope="col">Продукты</th>
-                        <th scope="col">Услуги</th>
-                        <th scope="col">Компания</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a>hello@cubit.su</a>
-                            <a>Написать в телеграмм</a>
-                            <a>+7 905 904-66-31</a>
-                            <a>ERP Trade</a>
-                            <a>г. Новокузнецк,<br> пр-кт Кузнецкстроевский д. 9</a>
-                        </td>
-                        <td>
-                            <a>Zveno</a>
-                            <a>Мобильные осмотры</a>
-                            <a>КГШ</a>
-                            <a>ERP Trade</a>
-                            <a>ОТК</a>
-                            <a>Проверка доверенностей</a>
-                        </td>
-                        <td>
-                            <a>Бизнес-анализ</a>
-                            <a>Frontend-разработка</a>
-                            <a>Backend-разработка</a>
-                            <a>Мобильная разработка</a>
-                        </td>
-                        <td>
-                            <a>О компании</a>
-                            <a>Команда</a>
-                            <a>Контакты</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table> -->
-            
+           
             <div class="name-org">
                 © 2024 ООО Кубит
             </div> 
@@ -472,5 +361,10 @@
     <script src="js/swiper-bundle.min.js"></script>
     <!-- JS for Swiper -->
     <script src="js/scriptBySwiper.js"></script>
+
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU&load=Geolink"
+    type="text/javascript"></script>
+
 </body>
 </html>
