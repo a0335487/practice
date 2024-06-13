@@ -532,7 +532,7 @@ h1{
 
   }
   .slide-content{
-    height: 385px;
+    
     min-height: fit-content;
     overflow: hidden;
   }
@@ -542,7 +542,7 @@ h1{
     padding: 36px;
     padding-bottom: 25px;
     border-radius: 22px;
-    height: 100%;
+    height: 385px;
   }
   .image-content,
   .card-content{
@@ -553,6 +553,7 @@ h1{
     height: 290px;
   }
   .image-content{
+    height: 50px;
    display: flex;
    justify-content: center;
   }
