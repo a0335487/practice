@@ -867,6 +867,13 @@ footer .name-org{
         display: none;
         margin-left: 20px;
     }
+    .footer-nav .show .col-point{
+        display: flex;
+    }
+    .footer-nav .show img{
+        rotate: 180deg;
+        transition: all 0.3s;
+    }
         
  }
  @media (max-width: 480px){

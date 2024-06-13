@@ -1,14 +1,19 @@
 // Меню в мобильной версии burger
-$(document).ready(function() {
-    $('.header-burger').click(function(event) {
-        $('.header-burger,.header-menu').toggleClass('active');
-        $('body').toggleClass('lock');
-    });
+const headerBurger = document.querySelector('.header-burger');
+const headerMenu = document.querySelector('.header-menu');
+const body = document.querySelector('body');
+
+headerBurger.addEventListener('click', function() {
+    headerBurger.classList.toggle('active');
+    headerMenu.classList.toggle('active');
+    body.classList.toggle('lock');
 });
 
-$(document).ready(function() {
-    $('.header-menu a').click(function(event) {
-        $('.header-burger,.header-menu').removeClass('active');
-        $('body').removeClass('lock');
+const menuLinks = document.querySelectorAll('.header-menu a');
+menuLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+        headerBurger.classList.remove('active');
+        headerMenu.classList.remove('active');
+        body.classList.remove('lock');
     });
 });

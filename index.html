@@ -117,16 +117,16 @@
                 <div class="service-navigation">
                     <div class="main-service-nav">
                         <div class="scroll-nav">
-                            <div onclick="showService('business')" id="business_but" class="service-nav-child active">
+                            <div onclick="showService(event, 'business')" id="business_but" class="service-nav-child active">
                                 <h5>Бизнес-анализ</h5>
                             </div>
-                            <div onclick="showService('backend')" id="backend_but" class="service-nav-child">
+                            <div onclick="showService(event, 'backend')" id="backend_but" class="service-nav-child">
                                 <h5>Backend</h5>
                             </div>
-                            <div onclick="showService('frontend')" id="frontend_but" class="service-nav-child">
+                            <div onclick="showService(event, 'frontend')" id="frontend_but" class="service-nav-child">
                                 <h5>Frontend</h5>
                             </div>
-                            <div onclick="showService('mobile')" id="mobile_but" class="service-nav-child">
+                            <div onclick="showService(event, 'mobile')" id="mobile_but" class="service-nav-child">
                                 <h5>Mobile </h5>
                             </div>
                         </div>
@@ -349,7 +349,7 @@
                 </div>
             </div>
             <div class="foot-col">
-                <div class="col-title product" onclick="openFooter('product')">
+                <div class="col-title product" onclick="openFooter(event)">
                     <h4>Продукты</h4><img class="foot-arrow" src="img/down.svg">
                 </div>
                 <div class="col-point" id="product">
@@ -362,7 +362,7 @@
                 </div>
             </div>
             <div class="foot-col">
-                <div class="col-title services" onclick="openFooter('services')">
+                <div class="col-title services" onclick="openFooter(event)">
                     <h4>Услуги</h4><img class="foot-arrow" src="img/down.svg">
                 </div>
                 <div class="col-point" id="services">
@@ -373,7 +373,7 @@
                 </div>
             </div>
             <div class="foot-col">
-                <div class="col-title company" onclick="openFooter('company')">
+                <div class="col-title company" onclick="openFooter(event)">
                     <h4>Компания</h4><img class="foot-arrow" src="img/down.svg">
                 </div>
                 <div class="col-point" id="company">
