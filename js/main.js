@@ -1,40 +1,44 @@
 
 // Открыть список в footer
-function OpenFooter(str){
-    const foot_block = document.getElementById(str);
-    if (foot_block.style.display !== "flex"){
-        foot_block.style.display = "flex";
-    }
+function openFooter(str){
+    const footBlock = document.getElementById(str);
+    if( window.innerWidth <= 767 ){
+        if (footBlock.style.display !== "flex"){
+        footBlock.style.display = "flex";
+        }
+        else{
+        footBlock.style.display = "none";
+        }
+    } 
     else{
-        foot_block.style.display = "none";
-    }
-    
+        footBlock.style.display = "flex";
+    } 
 }
 
 
-function ServiceBlock(serviceName, number, imgSrc) {
-    var elements = document.querySelectorAll('.service-nav-child'); 
-    elements.forEach(function(element) {
+function serviceBlock(serviceName, number, imgSrc) {
+    const serviceElements = document.querySelectorAll('.service-nav-child'); 
+    serviceElements.forEach(function(element) {
         element.classList.remove('active');
     });
     
-    var h2 = document.querySelector('h3'); 
-    h2.textContent = serviceName; 
+    let serviceTitle = document.querySelector('h3'); 
+    serviceTitle.textContent = serviceName; 
     
-    var selectedElement = document.querySelectorAll('.service-nav-child')[number - 1];
+    let selectedElement = document.querySelectorAll('.service-nav-child')[number - 1];
     selectedElement.classList.add('active');
 
-    var serviceImg = document.querySelector('.service-img');
+    let serviceImg = document.querySelector('.service-img');
     serviceImg.src = 'img/' + imgSrc;
 }
 
 
 //скролл по якорным ссылкам
-function getScroll() {
+function getScroll(blockName) {
     function animate(draw, duration) {
-        var start = performance.now();
+        let start = performance.now();
         requestAnimationFrame(function animate(time) {
-            var timePassed = time - start;
+            let timePassed = time - start;
             if (timePassed > duration) {
                 timePassed = duration;
             }
@@ -44,7 +48,7 @@ function getScroll() {
             }
         });
     }
-    let nav = document.getElementById('header_menu'),
+    let nav = document.getElementById(blockName),
     links = nav.getElementsByTagName('a');  
     for (let i = 0; i < links.length; i++) {
         links[i].addEventListener('click', () => {
@@ -67,7 +71,8 @@ function getScroll() {
         });
     };
 }
-getScroll();
+getScroll('header_menu');
+getScroll('services');
 
 
 

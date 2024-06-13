@@ -28,6 +28,7 @@
 
 
     --button-manage-partners-background: #323638;
+
 }
 
 *{
@@ -44,9 +45,11 @@ body {
 }
 button{
     font-family: 'HeliosExt';
+    cursor: pointer;
 }
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 li{
     list-style-type: none;
@@ -408,13 +411,17 @@ h1{
         padding: 5px;
         scroll-snap-align: start;
     }
-    .service-nav-child a{ 
+    .service-nav-child h5{ 
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: normal;
+        color: var(--text-white-color);
         flex-shrink: 0;
         width: 100%;
         text-align: center;
         padding: 17px 23px;
     }
-    .main-service-nav .active a{
+    .main-service-nav .active h5{
         background: var(--service-nav-active-background);
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
         border-radius: 100px;
