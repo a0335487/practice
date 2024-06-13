@@ -77,14 +77,14 @@ header{
     width: 1400px;
     z-index: 4;
 }
-.header_burger{
+.header-burger{
     display: none;
 }
 @media (max-width:1000px){
     body.lock{
         overflow: hidden;
     }
-    .header_menu{
+    .header-menu{
         position: fixed;
         top: -100vh;
         left: 0;
@@ -95,7 +95,7 @@ header{
         z-index: 3;
         overflow: auto;
     }
-    .header_menu.active{
+    .header-menu.active{
         top: 65px;
     }
     .header-nav ul{
@@ -107,15 +107,15 @@ header{
         text-align: center;
         padding: 15px 0 !important;
     }
-    .header_burger{
+    .header-burger{
         display: block;
         position: relative;
         width: 20px;
         height: 10px;
         z-index: 4;
     }
-    .header_burger:before,
-    .header_burger:after{
+    .header-burger:before,
+    .header-burger:after{
         content: '';
         background-color: var(--text-white-color);
         position: absolute;
@@ -124,17 +124,17 @@ header{
         left: 0;
         transition: all 0.3s ease 0s;
     }
-    .header_burger:before{
+    .header-burger:before{
         top: 0;
     }
-    .header_burger:after{
+    .header-burger:after{
         bottom: 0;
     }
-    .header_burger.active:before{
+    .header-burger.active:before{
         transform: rotate(45deg);
         top: 3.5px;
     }
-    .header_burger.active:after{
+    .header-burger.active:after{
         transform: rotate(-45deg);
         bottom: 4px;
     }
@@ -252,6 +252,7 @@ header{
 	background-image: linear-gradient(to right, #fff, #fff, #000000);
  }
  .right-info p{
+    max-width: 200px;
     margin-top: 10px;
     font-size: 14px;
     color: var(--main-orange-color);
@@ -603,10 +604,9 @@ h1{
     flex-direction: row;
     align-items: center;
 }
-.footer-nav .col-title i{
+.footer-nav .col-title .foot-arrow{
     display: none;
-    margin-left: 10px;
-    font-size: 20px;
+    margin-left: 8px;
 }
 .col-point-info{
     margin-top: 20px;
@@ -848,10 +848,10 @@ footer .name-org{
      .footer-nav .col-title{
         cursor: pointer;
      }
-     .footer-nav .col-title:hover{
+     /* .footer-nav .col-title:hover{
         color:var(--main-orange-color);
-     }
-     .footer-nav .col-title i{
+     } */
+     .footer-nav .col-title .foot-arrow{
         display: flex;
      }
     .foot-col{

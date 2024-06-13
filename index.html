@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,13 @@
 <body>
     <header>
         <nav class="header-nav">
-            <div class="header_burger">
+            <div class="header-burger">
                 <span></span>
             </div>
             <div class="nav-logo">
                 <a href="#"><img src="img/logo.svg" alt="logo" width="123px"></a>
             </div>
-            <div class="header_menu" id="header_menu">
+            <div class="header-menu" id="header_menu">
                 <ul>
                     <li><a href="#">Продукты</a></li>
                     <li><a href="#">Проекты</a></li>
@@ -50,7 +50,7 @@
                 <img class="orange" src="img/preview_img.png" alt="">
                 <div class="right-info">
                     <span>1100</span>
-                    <p>человек ежедневно<br> пользуются нашими<br> продуктами</p>
+                    <p>человек ежедневно пользуются нашими продуктами</p>
                 </div>
             </div>   
         </article>
@@ -118,47 +118,87 @@
                 <div class="service-navigation">
                     <div class="main-service-nav">
                         <div class="scroll-nav">
-                            <div onclick="serviceBlock('Бизнес-анализ', 1, 'business.svg')" class="service-nav-child active">
+                            <div onclick="showService('business')" id="business_but" class="service-nav-child active">
                                 <h5>Бизнес-анализ</h5>
                             </div>
-                            <div onclick="serviceBlock('Backend', 2, 'backend.svg')" class="service-nav-child">
+                            <div onclick="showService('backend')" id="backend_but" class="service-nav-child">
                                 <h5>Backend</h5>
                             </div>
-                            <div onclick="serviceBlock('Frontend', 3, 'frontend.svg')" class="service-nav-child">
+                            <div onclick="showService('frontend')" id="frontend_but" class="service-nav-child">
                                 <h5>Frontend</h5>
                             </div>
-                            <div onclick="serviceBlock('Mobile', 4, 'mobile.svg')" class="service-nav-child">
+                            <div onclick="showService('mobile')" id="mobile_but" class="service-nav-child">
                                 <h5>Mobile </h5>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-
+            
 
                 <div class="service-main">
-                    <div class="service-info">
+                    <div class="service-info" id="service-info-business">
                         <h3 id="service-title">Бизнес-анализ</h3>
                         <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
                             Анализируем уже существующие  цифровые системы, предлагаем изменения, 
                             описываем  технические требования на основе бизнес-требований.
                         </p>
-                        <!-- <p class="tools-mobile">Технологии: HTML5, CSS3, Bootstrap, БЭМ, JS, Jquery, VanilaJS, ES6+,
-                             WebPack, VUE.js, React.js, Angular</p> -->
                         <div class="tools">
                             <ul>
-                                <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>Bootstrap</li>
-                                <li>БЭМ</li>
-                                <li>JS</li>
-                                <li>Jquery</li>
-                                <li>VanilaJS</li>
-                                <li>ES6+</li>
-                                <li>WebPack</li>
-                                <li>VUE.js</li>
-                                <li>React.js</li>
-                                <li>Angular</li>
+                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
+                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
+                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
+                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
+                            </ul>
+                        </div>
+                        <button class="preview-request preview-request-second">Подробнее</button>
+                    </div>
+
+                    <div class="service-info" id="service-info-backend" style="display: none;">
+                        <h3 id="service-title">Backend</h3>
+                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
+                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
+                            описываем  технические требования на основе бизнес-требований.
+                        </p>
+                        <div class="tools">
+                            <ul>
+                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
+                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
+                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
+                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
+                            </ul>
+                        </div>
+                        <button class="preview-request preview-request-second">Подробнее</button>
+                    </div>
+
+                    <div class="service-info" id="service-info-frontend" style="display: none;">
+                        <h3 id="service-title">Frontend</h3>
+                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
+                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
+                            описываем  технические требования на основе бизнес-требований.
+                        </p>
+                        <div class="tools">
+                            <ul>
+                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
+                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
+                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
+                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
+                            </ul>
+                        </div>
+                        <button class="preview-request preview-request-second">Подробнее</button>
+                    </div>
+
+                    <div class="service-info" id="service-info-mobile" style="display: none;">
+                        <h3 id="service-title">Mobile</h3>
+                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
+                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
+                            описываем  технические требования на основе бизнес-требований.
+                        </p>
+                        <div class="tools">
+                            <ul>
+                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
+                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
+                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
+                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
                             </ul>
                         </div>
                         <button class="preview-request preview-request-second">Подробнее</button>
@@ -174,7 +214,7 @@
                     <h2>Партнеры</h2>
                     <div class="partners-slide-manage">
                         <button class="but-manage swiper-left"><img src="img/arrow_left.svg" alt=""></button>
-                        <button class="but-manage swiper-right"><img src="img/arrow_right.svg" alt=""></i></button>
+                        <button class="but-manage swiper-right"><img src="img/arrow_right.svg" alt=""></button>
                     </div>
                 </div>
 
@@ -310,8 +350,8 @@
                 </div>
             </div>
             <div class="foot-col">
-                <div class="col-title" onclick="openFooter('product')">
-                    <h4>Продукты</h4><i class='bx bx-chevron-down'></i>
+                <div class="col-title product" onclick="openFooter('product')">
+                    <h4>Продукты</h4><img class="foot-arrow" src="img/down.svg">
                 </div>
                 <div class="col-point" id="product">
                     <a href="#">Zveno</a>
@@ -323,19 +363,19 @@
                 </div>
             </div>
             <div class="foot-col">
-                <div class="col-title" onclick="openFooter('services')">
-                    <h4>Услуги</h4><i class='bx bx-chevron-down'></i>
+                <div class="col-title services" onclick="openFooter('services')">
+                    <h4>Услуги</h4><img class="foot-arrow" src="img/down.svg">
                 </div>
                 <div class="col-point" id="services">
-                    <a href="#serviceSection" onclick="serviceBlock('Бизнес-анализ', 1, 'business.svg')">Бизнес-анализ</a>
-                    <a href="#serviceSection" onclick="serviceBlock('Frontend', 3, 'frontend.svg')">Frontend-разработка</a>
-                    <a href="#serviceSection" onclick="serviceBlock('Backend', 2, 'backend.svg')">Backend-разработка</a>
-                    <a href="#serviceSection" onclick="serviceBlock('Mobile', 4, 'mobile.svg')">Мобильная разработка</a>
+                    <a href="#serviceSection">Бизнес-анализ</a>
+                    <a href="#serviceSection">Frontend-разработка</a>
+                    <a href="#serviceSection">Backend-разработка</a>
+                    <a href="#serviceSection">Мобильная разработка</a>
                 </div>
             </div>
             <div class="foot-col">
-                <div class="col-title" onclick="openFooter('company')">
-                    <h4>Компания</h4><i class='bx bx-chevron-down'></i>
+                <div class="col-title company" onclick="openFooter('company')">
+                    <h4>Компания</h4><img class="foot-arrow" src="img/down.svg">
                 </div>
                 <div class="col-point" id="company">
                     <a href="#">О компании</a>
