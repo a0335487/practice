@@ -19,48 +19,31 @@ function showService(event, serviceType) {
     const parent = event.target.closest(".service-nav-child");
     parent.classList.add('active');
 
-    const serviceInfos = document.querySelectorAll('.service-info'); 
+    const serviceInfos = document.querySelectorAll('.service-main'); 
     serviceInfos.forEach(function(info) {
         info.style.display = 'none';
     });
     
     const selectedInfo = document.getElementById('service-info-' + serviceType);
     selectedInfo.style.display = 'block';
-
-    const serviceImg = document.querySelector('.service-img');
-    serviceImg.src = 'img/' + serviceType + '.svg';  
+ 
 }
 
 
 
 //скролл по якорным ссылкам
-function getScroll(blockName) {
-    let nav = document.getElementById(blockName);
-    let links = nav.getElementsByTagName('a');  
+const smoothLinks = document.querySelectorAll("a[href^='#']");
+for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        const idSection = smoothLink.getAttribute("href");
 
-    for (let i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', (event) => {
-            event.preventDefault();
-            let linkAttr = links[i].getAttribute('href').match(/[a-z]/gi);
-            console.log(linkAttr);
-            let linkStr = linkAttr.join('');
-            console.log(linkStr);
-            let div = document.getElementById(linkStr);
-            let divId = div.getAttribute('id');
-
-            if (linkStr == divId) {
-                window.scroll({
-                    top: div.getBoundingClientRect().top,
-                    behavior: 'smooth'
-                });
-            }
+        document.querySelector(idSection).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
-    }
-}
-
-getScroll('header_menu');
-getScroll('services');
-
+    });
+};
 
 
 
