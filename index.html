@@ -1,12 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
 </head>
 <body>
-    
+    <header>
+        <nav class="header-nav">
+            <div class="header-burger">
+                <span></span>
+            </div>
+            <div class="nav-logo">
+                <a href="#"><img src="img/logo.svg" alt="logo" width="123px"></a>
+            </div>
+            <div class="header-menu" id="header_menu">
+                <ul>
+                    <li><a href="#">Продукты</a></li>
+                    <li><a href="#">Проекты</a></li>
+                    <li><a href="#serviceSection">Услуги</a></li>
+                    <li><a href="#partners">Компания</a></li>
+                    <li><a href="#">Команда</a></li>
+                    <li><a href="#footer">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="button-nav">
+                <button class="telegram"><img src="img/telegram_icon.svg" alt="telegram"></button>
+                <button class="request">Заявка</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article class="preview-content">
+            <section class="content-section">
+                <div class="preview-info">
+                    <h1>IT-Решения<br> для предприятий промышленности</h1>
+                    <p>Мы молодая компания, но это не мешает нам создавать мощные продукты для вашего бизнеса. 
+                        Полностью ведем проект или помогаем команде на стороне клиента.</p>
+                    <button class="preview-request">Оставить заявку</button>
+                </div>
+            </section>  
+            <div class="preview-img">
+                <img class="orange" src="img/preview_img.png" alt="">
+                <div class="right-info">
+                    <span>1100</span>
+                    <p>человек ежедневно пользуются нашими продуктами</p>
+                </div>
+            </div>   
+        </article>
+        <div class="line">
+                <div class="line_inner line_inner_1">
+                    <span class="line_content">ClickHouse</span>
+                    <span class="line_content">Laravel</span>
+                    <span class="line_content">Django</span>
+                    <span class="line_content">Yii</span>
+                    <span class="line_content">PostgreSQL</span>
+                    <span class="line_content">Flask</span>
+                    <span class="line_content">Redis</span>
+                    <span class="line_content">ClickHouse</span>
+                    <span class="line_content">Laravel</span>
+                    <span class="line_content">Django</span>
+                    <span class="line_content">Yii</span>
+                    <span class="line_content">PostgreSQL</span>
+                    <span class="line_content">Flask</span>
+                    <span class="line_content">Redis</span>
+                    <span class="line_content">ClickHouse</span>
+                    <span class="line_content">Laravel</span>
+                    <span class="line_content">Django</span>
+                    <span class="line_content">Yii</span>
+                    <span class="line_content">PostgreSQL</span>
+                    <span class="line_content">Flask</span>
+                    <span class="line_content">Redis</span>
+                </div>
+                <div class="line_inner line_inner_2">
+                    <span class="line_content">ClickHouse</span>
+                    <span class="line_content">Laravel</span>
+                    <span class="line_content">Django</span>
+                    <span class="line_content">Yii</span>
+                    <span class="line_content">PostgreSQL</span>
+                    <span class="line_content">Flask</span>
+                    <span class="line_content">Redis</span>
+                    <span class="line_content">ClickHouse</span>
+                    <span class="line_content">Laravel</span>
+                    <span class="line_content">Django</span>
+                    <span class="line_content">Yii</span>
+                    <span class="line_content">PostgreSQL</span>
+                    <span class="line_content">Flask</span>
+                    <span class="line_content">Redis</span>
+                    <span class="line_content">ClickHouse</span>
+                    <span class="line_content">Laravel</span>
+                    <span class="line_content">Django</span>
+                    <span class="line_content">Yii</span>
+                    <span class="line_content">PostgreSQL</span>
+                    <span class="line_content">Flask</span>
+                    <span class="line_content">Redis</span>
+                </div>  
+        </div>
+        <article class="main-content">
+            <section class="service-section" id="serviceSection">
+                <h2>Услуги и решения</h2>
+                <!-- <nav id="service-nav" class="service-nav">
+                    <ul>
+                        <li class="active" id="bisness" onclick="Nav1()"><a>Бизнес-анализ</a></li>
+                        <li id="Backend" onclick="Nav2()"><a>Backend</a></li>
+                        <li id="frontend" onclick="Nav3()"><a>Frontend</a></li>
+                        <li id="mobile" onclick="Nav4()"><a>Mobile</a></li>
+                    </ul>
+                    <div id="active-nav" class="active-nav"></div>
+                </nav> -->
+
+                <div class="service-navigation">
+                    <div class="main-service-nav">
+                        <div class="scroll-nav">
+                            <div onclick="showService(event, 'business')" id="business_but" class="service-nav-child active">
+                                <h5>Бизнес-анализ</h5>
+                            </div>
+                            <div onclick="showService(event, 'backend')" id="backend_but" class="service-nav-child">
+                                <h5>Backend</h5>
+                            </div>
+                            <div onclick="showService(event, 'frontend')" id="frontend_but" class="service-nav-child">
+                                <h5>Frontend</h5>
+                            </div>
+                            <div onclick="showService(event, 'mobile')" id="mobile_but" class="service-nav-child">
+                                <h5>Mobile </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <div class="service-main" id="service-info-business">
+                    <div class="service-info">
+                        <h3 id="service-title">Бизнес-анализ</h3>
+                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
+                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
+                            описываем  технические требования на основе бизнес-требований.
+                        </p>
+                        <div class="tools">
+                            <ul>
+                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
+                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
+                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
+                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
+                            </ul>
+                        </div>
+                        <button class="preview-request preview-request-second">Подробнее</button>
+                    </div>
+                    <div class="service-picture">
+                        <img id="service-img" class="service-img" src="img/business.svg" alt="">
+                    </div>
+                </div>
+
+
+                <div class="service-main" id="service-info-backend" style="display: none;">
+                    <div class="service-info" >
+                        <h3 id="service-title">Backend</h3>
+                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
+                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
+                            описываем  технические требования на основе бизнес-требований.
+                        </p>
+                        <div class="tools">
+                            <ul>
+                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
+                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
+                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
+                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
+                            </ul>
+                        </div>
+                        <button class="preview-request preview-request-second">Подробнее</button>
+                    </div>
+                    <div class="service-picture">
+                        <img id="service-img" class="service-img" src="img/backend.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="service-main" id="service-info-frontend" style="display: none;">
+                    <div class="service-info">
+                        <h3 id="service-title">Frontend</h3>
+                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
+                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
+                            описываем  технические требования на основе бизнес-требований.
+                        </p>
+                        <div class="tools">
+                            <ul>
+                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
+                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
+                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
+                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
+                            </ul>
+                        </div>
+                        <button class="preview-request preview-request-second">Подробнее</button>
+                    </div>
+                    <div class="service-picture">
+                        <img id="service-img" class="service-img" src="img/frontend.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="service-main" id="service-info-mobile" style="display: none;">
+                    <div class="service-info">
+                        <h3 id="service-title">Mobile</h3>
+                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
+                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
+                            описываем  технические требования на основе бизнес-требований.
+                        </p>
+                        <div class="tools">
+                            <ul>
+                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
+                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
+                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
+                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
+                            </ul>
+                        </div>
+                        <button class="preview-request preview-request-second">Подробнее</button>
+                    </div>
+                    <div class="service-picture">
+                        <img id="service-img" class="service-img" src="img/mobile.svg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="partners" id="partners">
+                <div class="partners-title">
+                    <h2>Партнеры</h2>
+                    <div class="partners-slide-manage">
+                        <button class="but-manage swiper-left"><img src="img/arrow_left.svg" alt=""></button>
+                        <button class="but-manage swiper-right"><img src="img/arrow_right.svg" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="slide-container swiper">
+                    <div class="slide-content">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <div class="card-content">
+                                    <h4>Амурсталь</h4>
+                                    <p>«Амурсталь» — единственный на Дальнем Востоке России металлургический завод, 
+                                        производящий сталь по электросталеплавильной технологии с дальнейшим 
+                                        переделом в сортовой прокат.</p>
+                                </div>
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="img/amurstal_icon.svg" alt="" height="40px">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide">
+                                <div class="card-content">
+                                    <h4>СГМК</h4>
+                                    <p>Сибирская горно-металлургическая компания (СГМК), 
+                                        созданная в 2006 году, — безусловный лидер среди предприятий 
+                                        горно-металлургической отрасли Кузбасса, одна из ведущих компаний 
+                                        на российском рынке.</p>
+                                </div>
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="img/sgmk_icon.svg" alt="" height="27px">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide">
+                                <div class="card-content">
+                                    <h4>Запсибруда</h4>
+                                    <p>Сибирская горно-металлургическая компания (СГМК), 
+                                        созданная в 2006 году, — безусловный лидер среди предприятий 
+                                        горно-металлургической отрасли Кузбасса, одна из ведущих 
+                                        компаний на российском рынке</p>
+                                </div>
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="img/zapsibruda_icon.svg" alt="" height="32px">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide">
+                                <div class="card-content">
+                                    <h4>Амурсталь</h4>
+                                    <p>«Амурсталь» — единственный на Дальнем Востоке России металлургический завод, 
+                                        производящий сталь по электросталеплавильной технологии с дальнейшим 
+                                        переделом в сортовой прокат.</p>
+                                </div>
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="img/amurstal_icon.svg" alt="" height="40px">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card swiper-slide">
+                                <div class="card-content">
+                                    <h4>СГМК</h4>
+                                    <p>Сибирская горно-металлургическая компания (СГМК), 
+                                        созданная в 2006 году, — безусловный лидер среди предприятий 
+                                        горно-металлургической отрасли Кузбасса, одна из ведущих компаний 
+                                        на российском рынке.</p>
+                                </div>
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="img/sgmk_icon.svg" alt="" height="27px">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="card-content">
+                                    <h4>Запсибруда</h4>
+                                    <p>Сибирская горно-металлургическая компания (СГМК), 
+                                        созданная в 2006 году, — безусловный лидер среди предприятий 
+                                        горно-металлургической отрасли Кузбасса, одна из ведущих 
+                                        компаний на российском рынке</p>
+                                </div>
+                                <div class="image-content">
+                                    <div class="card-image">
+                                        <img src="img/zapsibruda_icon.svg" alt="" height="32px">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                 
+                </div>
+
+                <div class="gradient-parent">
+                    <div class="gradient">
+                        <svg width="832" height="1579" viewBox="0 0 832 1579" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse opacity="0.15" cx="785.5" cy="789.5" rx="785.5" ry="789.5" fill="url(#paint0_radial_2095_611)" />
+                            <defs>
+                              <radialGradient id="paint0_radial_2095_611" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(785.5 789.5) rotate(-90) scale(789.5 787.115)">
+                                <stop stop-color="#5809B3" />
+                                <stop offset="0.251222" stop-color="#5809B3" stop-opacity="0.75" />
+                                <stop offset="0.497556" stop-color="#5809B3" stop-opacity="0.5" />
+                                <stop offset="0.749756" stop-color="#5809B3" stop-opacity="0.25" />
+                                <stop offset="1" stop-color="#360073" stop-opacity="0" />
+                              </radialGradient>
+                            </defs>
+                          </svg>
+                      </div>
+                  </div> 
+            </section>
+           
+        </article>
+    </main>
+    <footer id="footer">
+        <nav class="footer-nav">
+            <div class="foot-col">
+                <div class="col-title first-title">
+                    <img src="img/logo.svg" alt="logo" width="123px">
+                </div>
+                <div class="col-point-info">
+                    <a target="_blank" href="mailto:hello@cubit.su">hello@cubit.su</a>
+                    <a href="#">Написать в телеграмм</a>
+                    <a href="tel:+79059046631">+7 905 904-66-31</a>
+                    <a href="#">ERP Trade</a>
+                    <a target="_blank" href="https://yandex.ru/maps/237/novokuznetsk/house/kuznetskstroyevskiy_prospekt_9/bE4YdwVoTEQBQFtpfXt3cnpqYg==/?indoorLevel=1&ll=87.128515%2C53.763696&z=17.25">
+                    г. Новокузнецк,<br> пр-кт Кузнецкстроевский д. 9
+                </a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <div class="col-title product" onclick="openFooter(event)">
+                    <h4>Продукты</h4><img class="foot-arrow" src="img/down.svg">
+                </div>
+                <div class="col-point" id="product">
+                    <a href="#">Zveno</a>
+                    <a href="#">Мобильные осмотры</a>
+                    <a href="#">КГШ</a>
+                    <a href="#">ERP Trade</a>
+                    <a href="#">ОТК</a>
+                    <a href="#">Проверка доверенностей</a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <div class="col-title services" onclick="openFooter(event)">
+                    <h4>Услуги</h4><img class="foot-arrow" src="img/down.svg">
+                </div>
+                <div class="col-point" id="services">
+                    <a href="#serviceSection">Бизнес-анализ</a>
+                    <a href="#serviceSection">Frontend-разработка</a>
+                    <a href="#serviceSection">Backend-разработка</a>
+                    <a href="#serviceSection">Мобильная разработка</a>
+                </div>
+            </div>
+            <div class="foot-col">
+                <div class="col-title company" onclick="openFooter(event)">
+                    <h4>Компания</h4><img class="foot-arrow" src="img/down.svg">
+                </div>
+                <div class="col-point" id="company">
+                    <a href="#">О компании</a>
+                    <a href="#">Команда</a>
+                    <a href="#">Контакты</a>
+                </div>
+            </div>
+           
+            <div class="name-org">
+                © 2024 ООО Кубит
+            </div> 
+        </nav>
+    </footer>
+
+
+    <!-- JS for Menu -->
+    <script src="js/scriptByMenu.js"></script>
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- JS for Swiper -->
+    <script src="js/scriptBySwiper.js"></script>
+
+
 </body>
 </html>
