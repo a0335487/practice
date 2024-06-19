@@ -39,6 +39,9 @@ serviceNavChildren.forEach(function(child) {
         navTitles.forEach(function(title, index) {
             title.innerText = data.items[index].title;
         });
+        document.getElementById('service-title').innerText =  data.items[0].title;
+        document.getElementById('service-description').innerText = data.items[0].description;
+        document.getElementById('service-img').src = "img/" + data.items[0].img;
     })
     .catch(error => console.error('Error:', error));
 });
