@@ -583,6 +583,133 @@ h1{
     rgb(88, 9, 178) 74.97556209564209%, rgb(54, 0, 115) 100%);
   }
 
+
+
+
+
+
+
+
+
+/*FORM*/
+.form{
+    position: relative;
+    height: 800px;
+    overflow: hidden;
+}
+.form-section-content{
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.form-title{
+    z-index: 3;
+    width: 40%;
+}
+.form-title h2{
+    color: var(--text-white-color);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 112%;
+}
+.form-title p{
+    margin-top: 28px;
+    color: var(--text-white-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.form-content{
+    display: flex;
+    
+}
+.form-content .form-main-content{
+    z-index: 3;
+    border-radius: 16px;
+    padding: 40px 40px 32px 40px;
+    width: 683px;   
+    backdrop-filter: blur(20px);
+    background: rgba(40, 37, 36, 0.85);                 
+}
+.form-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-content .input-form{
+    background-color: var(--text-white-color);
+    border-radius: 8px;
+    padding: 36px 32px;
+}
+.input-form .form-row{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px 8px 0 0;
+    padding: 24px 0px 16px 0px;
+
+}
+.input-form .form-row:last-child{
+    border-bottom: none;
+}
+.input-form .form-row label{
+    display: flex;
+    width: 30%;
+}
+.input-form .form-row input, 
+.input-form .form-row select,
+.input-form .form-row textarea
+{
+    display: flex;
+    width: 70%;
+    border: none;
+    outline:none;
+}
+.form-content #file-upload { 
+    display: none;
+}
+.form-content .file-but{
+    border-radius: 36px;
+    padding: 14px 18px;
+    background: #323638;
+    color: var(--text-button-color);
+    border: none;
+}
+.form-content .agree{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--text-white-color);
+}
+.form-content .agree a{
+    color: var(--text-white-color);
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+
+.form-img-down{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+   height: 549px;
+   width: 100%;
+}
+.form-img-down img{
+    z-index: 1;
+    margin: auto;
+    /* width: 100%; */
+}
+
+
+
+
+
+
   /*footer*/
   footer{
     z-index: 2;

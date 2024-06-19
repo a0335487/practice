@@ -333,6 +333,57 @@
                       </div>
                   </div> 
             </section>
+
+            <section class="form">
+                <div class="form-section-content">
+                    <div class="form-title">
+                        <h2>Обсудить проект</h2>
+                        <p>Мы свяжемся с вами на следующий рабочий день и проконсультируем по всем вопросам.</p>
+                    </div>
+                    <div class="form-content">
+                        <div class="form-main-content">
+                            <form>
+                                <div class="input-form">
+                                    <div class="form-row">
+                                        <label for="choice">Услуга</label>
+                                        <select id="choice">
+                                            <option value="" disabled selected hidden>Выберите услугу</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="name">Имя</label>
+                                        <input type="text" id="name" placeholder="Иван Петров">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="mail">Почта</label>
+                                        <input type="email" id="mail" placeholder="ivanpetrov@mail.com">
+                                    </div>  
+                                    <div class="form-row">
+                                        <label for="phone">Телефон</label>
+                                        <input type="tel" id="phone" placeholder="+7 910 123-45-67">
+                                    </div>
+                                    <div class="form-row">
+                                        <label for="message">Сообщение</label>
+                                        <textarea id="message" placeholder="Опишите, пожалуйста, ваши задачи" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <input type="file" id="file-upload"/>
+                                <button class="file-but" onclick="document.getElementById('file-upload').click()">Прикрепить файл</button>
+                                <button class="request">Отправить</button>
+                                <p class="agree">Отправляя заявку, вы даете согласие на обработку персональных данных и соглашаетесь <a href="#">с политикой конфиденциальности</a></p>
+    
+                            </form>
+                        </div>
+                    </div>
+                        
+                </div>
+                <div class="form-img-down">
+                    <img src="img/form_down.svg">
+                </div>
+            </section>
            
         </article>
     </main>
