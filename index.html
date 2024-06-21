@@ -345,46 +345,48 @@
                             <form>
                                 <div class="input-form">
                                     <div class="form-row">
-                                        <label for="choice">Услуга</label>
-                                        <select id="choice">
-                                            <option value="" disabled selected hidden>Выберите услугу</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                        </select>
+                                        <div class="form-serv">
+                                            <h6>Услуга</h6>
+                                            <img src="img/min_down.svg">
+                                        </div>
+                                        <ul class="dropdown-menu">
+                                            <li>Бизнес-анализ</li>
+                                            <li>Frontend-разработка</li>
+                                            <li>Backend-разработка</li>
+                                            <li>Мобильная разработка</li>
+                                        </ul>
+
+
                                     </div>
                                     <div class="form-row">
-                                        <label for="name">Имя</label>
-                                        <input type="text" id="name" placeholder="Иван Петров">
+                                        <input type="text" id="name" placeholder="Имя">
                                     </div>
                                     <div class="form-row">
-                                        <label for="mail">Почта</label>
-                                        <input type="email" id="mail" placeholder="ivanpetrov@mail.com">
+                                        <input type="email" id="mail" placeholder="Почта">
                                     </div>  
                                     <div class="form-row">
-                                        <label for="phone">Телефон</label>
-                                        <input type="tel" id="phone" placeholder="+7 910 123-45-67">
+                                        <input type="tel" id="phone" placeholder="Телефон">
                                     </div>
                                     <div class="form-row">
-                                        <label for="message">Сообщение</label>
-                                        <textarea id="message" placeholder="Опишите, пожалуйста, ваши задачи" rows="3"></textarea>
+                                        <textarea id="message" placeholder="Опишите, пожалуйста, ваши задачи" rows="5"></textarea>
                                     </div>
                                 </div>
                                 <input type="file" id="file-upload"/>
-                                <button class="file-but" onclick="document.getElementById('file-upload').click()">Прикрепить файл</button>
+                                <button class="file-but" onclick="document.getElementById('file-upload').click()">
+                                    <img src="img/Vector.svg">
+                                    Прикрепить файл
+                                </button>
                                 <button class="request">Отправить</button>
                                 <p class="agree">Отправляя заявку, вы даете согласие на обработку персональных данных и соглашаетесь <a href="#">с политикой конфиденциальности</a></p>
-    
+
                             </form>
                         </div>
                     </div>
-                        
                 </div>
                 <div class="form-img-down">
                     <img src="img/form_down.svg">
-                </div>
-            </section>
-           
+                </div> 
+            </section>  
         </article>
     </main>
     <footer id="footer">

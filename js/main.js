@@ -73,3 +73,38 @@ function showService(event, serviceName) {
     })
     .catch(error => console.error('Error:', error));
 }
+
+
+
+
+
+//ФОРМА 
+const formServ = document.querySelector('.form-serv');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const h6Element = document.querySelector('.form-serv h6');
+
+formServ.addEventListener('click', function() {
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+
+    if (dropdownMenu.style.display === 'block') {
+        formServ.classList.add('active');
+    } else {
+        formServ.classList.remove('active');
+    }
+});
+
+dropdownMenu.addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
+        h6Element.textContent = e.target.textContent;
+        h6Element.style.color = '#fff';
+        dropdownMenu.style.display = 'none';
+        formServ.classList.remove('active');
+    }
+});
+
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.form-row')) {
+        dropdownMenu.style.display = 'none';
+        formServ.classList.remove('active');
+    }
+});

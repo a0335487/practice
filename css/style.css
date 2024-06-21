@@ -594,7 +594,9 @@ h1{
 /*FORM*/
 .form{
     position: relative;
-    height: 800px;
+    /* height: 800px;
+    min-height: fit-content; */
+    padding-bottom: 100px;
     overflow: hidden;
 }
 .form-section-content{
@@ -605,7 +607,7 @@ h1{
 }
 .form-title{
     z-index: 3;
-    width: 40%;
+    width: 35%;
 }
 .form-title h2{
     color: var(--text-white-color);
@@ -627,68 +629,77 @@ h1{
 }
 .form-content .form-main-content{
     z-index: 3;
-    border-radius: 16px;
+    border-radius: 20px;
     padding: 40px 40px 32px 40px;
     width: 683px;   
     backdrop-filter: blur(20px);
-    background: rgba(40, 37, 36, 0.85);                 
+    background: #282524DB;                 
 }
 .form-content form{
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
 .form-content .input-form{
-    background-color: var(--text-white-color);
-    border-radius: 8px;
-    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
 }
 .input-form .form-row{
+    position: relative;
     width: 100%;
     display: flex;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 8px 8px 0 0;
-    padding: 24px 0px 16px 0px;
-
 }
-.input-form .form-row:last-child{
-    border-bottom: none;
-}
-.input-form .form-row label{
-    display: flex;
-    width: 30%;
-}
+.input-form .form-row select, 
 .input-form .form-row input, 
-.input-form .form-row select,
-.input-form .form-row textarea
-{
+.input-form .form-row textarea{
     display: flex;
-    width: 70%;
-    border: none;
+    background: none;
     outline:none;
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 7.11px;
+    border: 1px solid #FFFFFF33;
+    color: var(--text-white-color);
+}
+.input-form .form-row select, 
+.input-form .form-row input::placeholder, 
+.input-form .form-row textarea::placeholder{
+    color: #9e9e9e;
+    font-size: 14px;
+}
+.form-content .request{
+    font-size: 14px;
+    font-weight: 400;
 }
 .form-content #file-upload { 
     display: none;
 }
 .form-content .file-but{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 36px;
     padding: 14px 18px;
-    background: #323638;
+    background: none;
     color: var(--text-button-color);
-    border: none;
+    border: 1px solid #FFFFFF33;
+}
+.form-content .file-but img{
+    margin-right: 8px;
 }
 .form-content .agree{
     font-weight: 400;
     font-size: 12px;
     line-height: 133%;
-    color: var(--text-white-color);
+    color: #707070;
 }
 .form-content .agree a{
-    color: var(--text-white-color);
+    color: #707070;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-}
+} 
 
 .form-img-down{
     position: absolute;
@@ -705,8 +716,52 @@ h1{
     /* width: 100%; */
 }
 
+.form-serv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 18px;
+    border-radius: 7.11px;
+    border: 1px solid #FFFFFF33;
+    cursor: pointer;
+}
+.form-serv h6{
+    font-weight: 400;
+    font-size: 14px;
+    color: #9e9e9e;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: 1;
+    background: #423D3C;
+    border-radius: 8px;
+    padding: 10px 16px 10px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text-white-color);
+    cursor: pointer;
+}
+.dropdown-menu li{
+    padding: 8px 0;
+}
 
-
+.dropdown-menu li:hover {
+    color: var(--main-orange-color);
+}
+.form-row .form-serv img{
+    rotate: 0deg;
+    transition: all 0.3s;
+}
+.form-row .active{
+    border-color: #ffffff77;
+}
+.form-row .active img{
+    rotate: 180deg;
+    transition: all 0.3s;
+}
 
 
 
@@ -770,7 +825,7 @@ footer .name-org{
     .preview-content .orange{
         margin-right: -200px;
     }
-    .header-nav, .service-section, .content-section, .partners-title, .footer-nav{
+    .header-nav, .service-section, .content-section, .partners-title, .form-section-content, .footer-nav{
         max-width: 95%;
     }
 }
@@ -778,7 +833,7 @@ footer .name-org{
     h1{
         font-size: 52px;
     }
-    .header-nav, .service-section, .content-section, .partners-title, .footer-nav{
+    .header-nav, .service-section, .content-section, .partners-title, .form-section-content, .footer-nav{
         width: 1200px;
     }
     .preview-content .orange{
@@ -790,9 +845,29 @@ footer .name-org{
     
  }
  @media (max-width: 1200px){
-    .header-nav, .service-section, .content-section, .partners-title, .footer-nav{
+    .header-nav, .service-section, .content-section, .partners-title, .form-section-content, .footer-nav{
         width: 1000px;
     }
+    .partners{
+        margin-bottom: 30px;
+    }
+    .form-section-content{
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+        /* height: 1000px; */
+
+    }
+    .form-title{
+        width: 100%;
+    }
+    /* .form-title h2{
+        width: 100%;
+    }
+    .form-title p{
+        width: 50%;
+    }
+  */
     .preview-content .orange{
         margin-right: -600px;
     }
@@ -922,7 +997,7 @@ footer .name-org{
     .service-section{
         max-width: 97%;
     }
-    .header-nav, .service-main, .content-section, .partners-title, .footer-nav{
+    .header-nav, .service-main, .content-section, .partners-title, .form-title, .footer-nav{
         width: 100%;
         padding-left: 20px;
     }
@@ -965,6 +1040,9 @@ footer .name-org{
     .slide-content{
         padding: 0 10px;
     }
+    .form-title h2{
+        font-size: 36px;
+    }
     footer{
         padding-top: 20px;
     }
@@ -997,6 +1075,10 @@ footer .name-org{
     }
     .footer-nav .show .col-point{
         display: flex;
+    }
+    .footer-nav .col-title img{
+        rotate: 0deg;
+        transition: all 0.3s;
     }
     .footer-nav .show img{
         rotate: 180deg;
