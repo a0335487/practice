@@ -103,3 +103,54 @@ document.addEventListener('click', function(e) {
         formServ.classList.remove('active');
     }
 });
+
+
+//ПРИКРЕПИТЬ ФАЙЛ
+var fileInput = document.getElementById('file-upload');
+var fileName = document.getElementById('file-name');
+var addFile = document.querySelector('.file-but .add');
+var delFile = document.querySelector('.file-but .del-file');
+var fileBut = document.querySelector('.file-but');
+function updateFileName() {    
+    fileName.innerText = fileInput.files[0].name;
+    addFile.style.display = 'none';
+    delFile.style.display = 'block';
+    fileBut.style.justifyContent = 'start';
+}
+function deleteFile(event){
+    event.stopPropagation();
+    fileInput.value = null; 
+    fileName.innerText = 'Прикрепить файл';
+    addFile.style.display = 'block';
+    delFile.style.display = 'none';
+    fileBut.style.justifyContent = 'center';
+}
+
+
+//валидация формы
+// document.getElementById('orderForm').addEventListener('submit', function (event) {
+//   event.preventDefault(); // Предотвращаем отправку формы
+//   const serv = document.querySelector('.form-serv h6').textContent;
+//   const name = document.getElementById('name').value;
+//   const email = document.getElementById('mail').value;
+//   const phone = document.getElementById('phone').value;
+//   const message = document.getElementById('message').value;
+
+//   if (!name || !email || !phone || !message) {
+//       document.getElementById('servError').innerText = 'Услуга' ? "Укажите услугу" : "";
+//       document.getElementById('nameError').innerText = !name ? "Укажите имя" : "";
+//       document.getElementById('mailError').innerText = !email ? "Укажите email" : "";
+//       document.getElementById('phoneError').innerText = !phone ? "Укажите телефон" : "";
+//       document.getElementById('messageError').innerText = !message ? "Укажите задачи" : "";
+//   } else if (!isValidEmail(email)) {
+//       document.getElementById('mailError').innerText = 'Введите корректный Email';
+//   } else {
+//       document.getElementById('orderForm').submit(); // Отправим форму, если все поля заполнены верно
+//   }
+// });
+
+// function isValidEmail(email) {
+//   // Регулярное выражение для проверки email
+//   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+//   return emailPattern.test(email);
+// }

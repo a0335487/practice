@@ -132,73 +132,7 @@
                         <img id="service-img" class="service-img" src="" alt="Service-img">
                     </div>
                 </div>
-            
-
-                <!-- <div class="service-main" id="service-info-backend" style="display: none;">
-                    <div class="service-info" >
-                        <h3 id="service-title">Backend</h3>
-                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
-                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
-                            описываем  технические требования на основе бизнес-требований.
-                        </p>
-                        <div class="tools">
-                            <ul>
-                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
-                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
-                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
-                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
-                            </ul>
-                        </div>
-                        <button class="preview-request preview-request-second">Подробнее</button>
-                    </div>
-                    <div class="service-picture">
-                        <img id="service-img" class="service-img" src="img/backend.svg" alt="">
-                    </div>
-                </div>
-
-                <div class="service-main" id="service-info-frontend" style="display: none;">
-                    <div class="service-info">
-                        <h3 id="service-title">Frontend</h3>
-                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
-                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
-                            описываем  технические требования на основе бизнес-требований.
-                        </p>
-                        <div class="tools">
-                            <ul>
-                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
-                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
-                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
-                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
-                            </ul>
-                        </div>
-                        <button class="preview-request preview-request-second">Подробнее</button>
-                    </div>
-                    <div class="service-picture">
-                        <img id="service-img" class="service-img" src="img/frontend.svg" alt="">
-                    </div>
-                </div>
-
-                <div class="service-main" id="service-info-mobile" style="display: none;">
-                    <div class="service-info">
-                        <h3 id="service-title">Mobile</h3>
-                        <p id="service-description">Бесшовно встраиваем новые ИТ-решения в бизнес-  процессы компаний. 
-                            Анализируем уже существующие  цифровые системы, предлагаем изменения, 
-                            описываем  технические требования на основе бизнес-требований.
-                        </p>
-                        <div class="tools">
-                            <ul>
-                                <li>HTML5</li><li>CSS3</li><li>Bootstrap</li>
-                                <li>БЭМ</li><li>JS</li><li>Jquery</li>
-                                <li>VanilaJS</li><li>ES6+</li><li>WebPack</li>
-                                <li>VUE.js</li><li>React.js</li><li>Angular</li>
-                            </ul>
-                        </div>
-                        <button class="preview-request preview-request-second">Подробнее</button>
-                    </div>
-                    <div class="service-picture">
-                        <img id="service-img" class="service-img" src="img/mobile.svg" alt="">
-                    </div>
-                </div> -->
+    
             </section>
 
             <section class="partners" id="partners">
@@ -331,7 +265,7 @@
                     </div>
                     <div class="form-content">
                         <div class="form-main-content">
-                            <form>
+                            <form id="orderForm">
                                 <div class="input-form">
                                     <div class="form-row">
                                         <div class="form-serv">
@@ -344,28 +278,33 @@
                                             <li>Backend-разработка</li>
                                             <li>Мобильная разработка</li>
                                         </ul>
+                                        <!-- <div class="form-error" id="servError"></div> -->
 
-
                                     </div>
                                     <div class="form-row">
-                                        <input type="text" id="name" placeholder="Имя">
+                                        <input type="text" id="name" name="name" placeholder="Имя">
+                                        <!-- <div class="form-error" id="nameError"></div> -->
                                     </div>
                                     <div class="form-row">
-                                        <input type="email" id="mail" placeholder="Почта">
-                                    </div>  
-                                    <div class="form-row">
-                                        <input type="tel" id="phone" placeholder="Телефон">
+                                        <input type="email" id="mail" name="mail" placeholder="Почта">
+                                        <!-- <div class="form-error" id="mailError"></div> -->
                                     </div>
                                     <div class="form-row">
-                                        <textarea id="message" placeholder="Опишите, пожалуйста, ваши задачи" rows="5"></textarea>
+                                        <input type="tel" id="phone" name="phone" placeholder="Телефон">
+                                        <!-- <div class="form-error" id="phoneError"></div> -->
+                                    </div>
+                                    <div class="form-row">
+                                        <textarea id="message" name="message" placeholder="Опишите, пожалуйста, ваши задачи" rows="5"></textarea>
+                                        <!-- <div class="form-error" id="messageError"></div> -->
                                     </div>
                                 </div>
-                                <input type="file" id="file-upload"/>
-                                <button class="file-but" onclick="document.getElementById('file-upload').click()">
-                                    <img src="img/Vector.svg">
-                                    Прикрепить файл
-                                </button>
-                                <button class="request">Отправить</button>
+                                <input type="file" id="file-upload" onchange="updateFileName()" style="display: none;"/>
+                                <span class="file-but" onclick="document.getElementById('file-upload').click()">
+                                    <img class="add" src="img/Vector.svg">
+                                    <span id="file-name">Прикрепить файл</span>
+                                    <img class="del-file" src="img/close.svg" style="display: none;" onclick="deleteFile(event)">
+                                </span>
+                                <button type="submit" class="request">Отправить</button>
                                 <p class="agree">Отправляя заявку, вы даете согласие на обработку персональных данных и соглашаетесь <a href="#">с политикой конфиденциальности</a></p>
 
                             </form>
@@ -377,6 +316,8 @@
                 </div> 
             </section>  
         </article>
+
+
     </main>
     <footer id="footer">
         <nav class="footer-nav">
