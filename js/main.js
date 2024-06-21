@@ -24,10 +24,13 @@ for (let smoothLink of smoothLinks) {
 
 //JSON
 const scrollNav = document.querySelector('.scroll-nav');
+let serviceData = null;
 
 fetch('https://gist.githubusercontent.com/a0335487/5073a29953069a00aae5b6e3e7e1ca9b/raw/e5fded489c03c8a24ef64431fac93008a7c70c57/data.json')
   .then(response => response.json())
   .then(data => {
+    serviceData = data;
+      
     for (let i = 0; i < data.items.length; i++) {
       const serviceNavChild = document.createElement('div');
       serviceNavChild.classList.add('service-nav-child');
@@ -54,28 +57,20 @@ fetch('https://gist.githubusercontent.com/a0335487/5073a29953069a00aae5b6e3e7e1c
   .catch(error => console.error('Error:', error));
 
 function showService(event, serviceName) {
-  fetch('https://gist.githubusercontent.com/a0335487/5073a29953069a00aae5b6e3e7e1ca9b/raw/e5fded489c03c8a24ef64431fac93008a7c70c57/data.json')
-    .then(response => response.json())
-    .then(data => {
-      const serviceElements = document.querySelectorAll('.service-nav-child');
-      serviceElements.forEach(function(element) {
-          element.classList.remove('active');
-      });
+    const service = serviceData.items.find(item => item.title === serviceName);
+    if (service) {
+        const serviceElements = document.querySelectorAll('.service-nav-child');
+        serviceElements.forEach(function(element) {
+            element.classList.remove('active');
+        });
 
-      const service = data.items.find(item => item.title === serviceName);
-      if (service) {
-          document.getElementById('service-title').innerText = service.title;
-          document.getElementById('service-description').innerText = service.description;
-          document.getElementById('service-img').src = "img/" + service.img;
-          const parent = event.target.closest(".service-nav-child");
-          parent.classList.add('active');
-      }
-    })
-    .catch(error => console.error('Error:', error));
+        document.getElementById('service-title').innerText = service.title;
+        document.getElementById('service-description').innerText = service.description;
+        document.getElementById('service-img').src = "img/" + service.img;
+        const parent = event.target.closest(".service-nav-child");
+        parent.classList.add('active');
+    }
 }
-
-
-
 
 
 //ФОРМА 
